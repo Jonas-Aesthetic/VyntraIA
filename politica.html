@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | VYNTRA IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --bg:       #04060d;
+    --bg2:      #080b16;
+    --bg3:      #0c1020;
+    --bg4:      #111828;
+    --border:   rgba(255,255,255,0.07);
+    --border2:  rgba(255,255,255,0.13);
+    --text:     #f0f4ff;
+    --text2:    #7a8aaa;
+    --text3:    #3d4a6a;
+    --blue:     #1a6bff;
+    --blue2:    #3d85ff;
+    --blue-dim: rgba(26,107,255,0.08);
+    --blue-bdr: rgba(26,107,255,0.2);
+    --font:     'Inter', sans-serif;
+    --r:        14px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background-image:
+        radial-gradient(circle at 20% 10%, rgba(26,107,255,0.07) 0%, transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(26,107,255,0.04) 0%, transparent 40%),
+        linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+}
+
+/* NAV */
+.top-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 2rem; height: 70px; max-width: 1240px; margin: 0 auto;
+    position: sticky; top: 0; z-index: 100;
+}
+.nav-wrap {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(4,6,13,0.85); backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+}
+.logo {
+    font-size: 1.4rem; font-weight: 900; letter-spacing: -0.5px;
+    color: var(--blue2); text-decoration: none;
+    text-shadow: 0 0 20px rgba(61,133,255,0.4);
+}
+.btn-back {
+    display: inline-flex; align-items: center; gap: 7px;
+    color: var(--text2); font-size: 0.875rem; font-weight: 500;
+    text-decoration: none; padding: 8px 16px;
+    border: 1px solid var(--border); border-radius: 99px;
+    transition: all 0.2s;
+}
+.btn-back:hover { color: var(--text); border-color: var(--border2); background: var(--bg2); }
+.back-arrow { transition: transform 0.2s; }
+.btn-back:hover .back-arrow { transform: translateX(-3px); }
+
+/* HERO */
+.page-hero {
+    text-align: center;
+    padding: 72px 2rem 56px;
+    max-width: 760px; margin: 0 auto;
+}
+.page-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--blue-dim); border: 1px solid var(--blue-bdr);
+    color: var(--blue2); font-size: 0.75rem; font-weight: 700;
+    padding: 6px 14px; border-radius: 99px;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 24px;
+}
+.page-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 900; letter-spacing: -2px; line-height: 1.05;
+    margin-bottom: 14px;
+}
+.page-hero h1 .accent {
+    background: linear-gradient(135deg, var(--blue2), #66aaff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.page-update {
+    font-size: 0.82rem; color: var(--text3); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.12em;
+}
+
+/* LAYOUT */
+.doc-layout {
+    display: grid; grid-template-columns: 240px 1fr;
+    gap: 40px; max-width: 1100px; margin: 0 auto;
+    padding: 0 2rem 100px; align-items: start;
+}
+
+/* SIDEBAR */
+.doc-sidebar {
+    position: sticky; top: 90px;
+}
+.sidebar-label {
+    font-size: 0.7rem; font-weight: 700; color: var(--text3);
+    text-transform: uppercase; letter-spacing: 0.14em;
+    margin-bottom: 14px; padding-left: 12px;
+}
+.sidebar-nav { display: flex; flex-direction: column; gap: 4px; }
+.sidebar-nav a {
+    display: block; color: var(--text2); text-decoration: none;
+    font-size: 0.875rem; font-weight: 500;
+    padding: 9px 12px; border-radius: 8px;
+    border-left: 2px solid transparent;
+    transition: all 0.2s;
+}
+.sidebar-nav a:hover { color: var(--text); background: var(--bg2); transform: translateX(3px); }
+.sidebar-nav a.active {
+    color: var(--blue2); background: var(--blue-dim);
+    border-left-color: var(--blue2); font-weight: 600;
+}
+
+/* CONTENT */
+.doc-content {
+    background: rgba(8,11,22,0.6); backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 20px; padding: 52px 56px;
+}
+.doc-section { margin-bottom: 52px; }
+.doc-section:last-child { margin-bottom: 0; }
+
+.doc-section h2 {
+    font-size: 1.25rem; font-weight: 700;
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 12px;
+    color: var(--text);
+}
+.section-bar {
+    width: 4px; height: 22px; border-radius: 2px; flex-shrink: 0;
+    background: linear-gradient(180deg, var(--blue2), #66aaff);
+}
+.doc-section p {
+    color: var(--text2); font-size: 1rem; line-height: 1.8;
+    margin-bottom: 16px; font-weight: 400;
+}
+.doc-section p:last-child { margin-bottom: 0; }
+
+.doc-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.doc-list li {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 18px;
+}
+.list-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--blue2); box-shadow: 0 0 8px rgba(61,133,255,0.6);
+    flex-shrink: 0; margin-top: 7px;
+}
+.doc-list li span { color: var(--text2); font-size: 0.95rem; line-height: 1.65; }
+
+/* DIVIDER */
+.doc-divider {
+    height: 1px; background: var(--border);
+    margin: 0 0 52px;
+}
+
+/* FOOTER CTA */
+.doc-footer-cta {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 16px; padding: 36px 32px;
+    text-align: center; margin-top: 52px;
+}
+.doc-footer-cta p {
+    font-size: 1rem; color: var(--text2); margin-bottom: 20px;
+    font-weight: 400;
+}
+.btn-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--blue); color: #fff;
+    font-size: 0.95rem; font-weight: 700;
+    padding: 13px 28px; border-radius: 10px;
+    text-decoration: none; transition: all 0.2s;
+    box-shadow: 0 0 25px rgba(26,107,255,0.3);
+}
+.btn-cta:hover { background: var(--blue2); transform: translateY(-2px); box-shadow: 0 0 40px rgba(26,107,255,0.5); }
+
+/* FOOTER */
+.page-footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 2rem; text-align: center;
+    font-size: 0.8rem; color: var(--text3);
+}
+.page-footer a { color: var(--text2); text-decoration: none; transition: color 0.2s; }
+.page-footer a:hover { color: var(--text); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .doc-layout { grid-template-columns: 1fr; padding: 0 1.25rem 80px; }
+    .doc-sidebar {
+        position: fixed; bottom: 0; left: 0; right: 0; top: auto;
+        background: rgba(4,6,13,0.95); backdrop-filter: blur(16px);
+        border-top: 1px solid var(--border); z-index: 90;
+        padding: 10px 12px;
+    }
+    .sidebar-label { display: none; }
+    .sidebar-nav { flex-direction: row; overflow-x: auto; gap: 8px; scrollbar-width: none; }
+    .sidebar-nav::-webkit-scrollbar { display: none; }
+    .sidebar-nav a {
+        white-space: nowrap; flex-shrink: 0;
+        border-left: none; border: 1px solid var(--border);
+        border-radius: 99px; padding: 7px 14px; font-size: 0.8rem;
+    }
+    .sidebar-nav a.active { border-color: var(--blue-bdr); }
+    .sidebar-nav a:hover { transform: none; }
+    .doc-content { padding: 32px 24px; margin-bottom: 80px; }
+    .page-hero { padding: 48px 1.25rem 40px; }
+}
+
+@media (max-width: 480px) {
+    .doc-content { padding: 24px 18px; border-radius: 14px; }
+    .page-hero h1 { font-size: 2rem; letter-spacing: -1px; }
+    .doc-section h2 { font-size: 1.1rem; }
+}
+    </style>
+</head>
+<body>
+
+<div class="nav-wrap">
+    <nav class="top-nav">
+        <a href="index.html" class="logo">VYNTRA</a>
+        <a href="index (1).html" class="btn-back">
+            <span class="back-arrow">←</span> Voltar ao Site
+        </a>
+    </nav>
+</div>
+
+<div class="page-hero">
+    <div class="page-badge">⚖️ Legal</div>
+    <h1>Política de <span class="accent">Privacidade</span></h1>
+    <p class="page-update">Última atualização: Março de 2026</p>
+</div>
+
+<div class="doc-layout">
+
+    <aside class="doc-sidebar">
+        <p class="sidebar-label">Índice</p>
+        <nav class="sidebar-nav" id="sidebarNav">
+            <a href="#compromisso" class="active">1. Compromisso</a>
+            <a href="#dados">2. Dados Coletados</a>
+            <a href="#ia">3. Uso da IA</a>
+            <a href="#lgpd">4. Seus Direitos</a>
+        </nav>
+    </aside>
+
+    <main class="doc-content">
+
+        <section id="compromisso" class="doc-section">
+            <h2><span class="section-bar"></span>1. Compromisso Vyntra</h2>
+            <p>A VYNTRA IA valoriza a sua privacidade e transparência acima de tudo. Esta política descreve de forma clara e objetiva como coletamos, utilizamos e protegemos seus dados pessoais ao interagir com nossas automações e serviços digitais.</p>
+            <p>Operamos com total conformidade à legislação vigente, garantindo que suas informações nunca sejam utilizadas além do escopo declarado.</p>
+        </section>
+
+        <div class="doc-divider"></div>
+
+        <section id="dados" class="doc-section">
+            <h2><span class="section-bar"></span>2. Dados que Coletamos</h2>
+            <p>Para garantir a eficiência de nossas soluções de automação 24/7, podemos coletar os seguintes dados:</p>
+            <ul class="doc-list">
+                <li><span class="list-dot"></span><span>Informações de contato — Nome, E-mail e Telefone fornecidos voluntariamente.</span></li>
+                <li><span class="list-dot"></span><span>Dados de interação em canais de atendimento, incluindo WhatsApp e Chatbot.</span></li>
+                <li><span class="list-dot"></span><span>Logs técnicos para melhoria contínua de performance da IA.</span></li>
+            </ul>
+        </section>
+
+        <div class="doc-divider"></div>
+
+        <section id="ia" class="doc-section">
+            <h2><span class="section-bar"></span>3. Uso da Inteligência Artificial</h2>
+            <p>Nossos sistemas processam informações para otimizar o tempo de resposta e garantir que você não perca vendas. Os dados são utilizados estritamente para a finalidade de automação contratada.</p>
+            <p>Toda a comunicação entre nossos servidores e seus dados trafega sob protocolos de <strong style="color:var(--text)">criptografia de ponta a ponta</strong>, assegurando a máxima segurança em cada interação.</p>
+        </section>
+
+        <div class="doc-divider"></div>
+
+        <section id="lgpd" class="doc-section">
+            <h2><span class="section-bar"></span>4. Seus Direitos (LGPD)</h2>
+            <p>Em total conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você possui os seguintes direitos garantidos:</p>
+            <ul class="doc-list">
+                <li><span class="list-dot"></span><span>Solicitar a exclusão definitiva de todos os seus dados de nossas bases.</span></li>
+                <li><span class="list-dot"></span><span>Acessar e corrigir quaisquer informações imprecisas ou desatualizadas.</span></li>
+                <li><span class="list-dot"></span><span>Revogar o consentimento de processamento de dados a qualquer momento, sem penalidades.</span></li>
+            </ul>
+        </section>
+
+        <div class="doc-footer-cta">
+            <p>Tem dúvidas sobre como tratamos seus dados? Nossa equipe responde em minutos.</p>
+            <a href="https://wa.me/5511940321244?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20a%20política%20de%20privacidade%20da%20Vyntra." class="btn-cta">
+                Falar com Suporte <span>→</span>
+            </a>
+        </div>
+
+    </main>
+</div>
+
+<footer class="page-footer">
+    <p>© 2025 VYNTRA IA. Todos os direitos reservados. &nbsp;·&nbsp; <a href="termos.html">Termos de Uso</a> &nbsp;·&nbsp; <a href="index (1).html">Voltar ao site</a></p>
+</footer>
+
+<script>
+(function() {
+    const sections = document.querySelectorAll('.doc-section[id]');
+    const links = document.querySelectorAll('.sidebar-nav a');
+    const sidebar = document.getElementById('sidebarNav');
+    let last = '';
+
+    function update() {
+        let current = '';
+        const offset = window.innerWidth <= 900 ? 200 : 130;
+        sections.forEach(s => {
+            if (window.scrollY >= s.offsetTop - offset) current = s.id;
+        });
+        if (current === last) return;
+        last = current;
+        links.forEach(a => {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === '#' + current) {
+                a.classList.add('active');
+                if (window.innerWidth <= 900 && sidebar) {
+                    const pos = a.offsetLeft - sidebar.clientWidth / 2 + a.clientWidth / 2;
+                    sidebar.scrollTo({ left: pos, behavior: 'smooth' });
+                }
+            }
+        });
+    }
+
+    links.forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.getElementById(a.getAttribute('href').slice(1));
+            if (target) {
+                const offset = window.innerWidth <= 900 ? 160 : 100;
+                window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+            }
+        });
+    });
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+
+    // Fade in sections
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.doc-section').forEach(s => {
+        s.style.opacity = '0';
+        s.style.transform = 'translateY(18px)';
+        s.style.transition = 'all 0.55s ease-out';
+        obs.observe(s);
+    });
+})();
+</script>
+</body>
+</html>
